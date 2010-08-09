@@ -20,6 +20,7 @@ get "/photos/:photo/info" do
   @image = EXIFR::JPEG.new(File.join("photos", params[:photo]))
   @latitude = dms_to_float @image.gps_latitude, @image.gps_latitude_ref
   @longitude = dms_to_float @image.gps_longitude, @image.gps_longitude_ref
+  @datetaken = @image.date_time
   erb :info
 end
 

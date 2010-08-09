@@ -1,8 +1,31 @@
 <html>
+<style type="text/css">
+<!--
+.style1 {
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	font-size: 36px;
+}
+.style2 {
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	font-size: 18px;
+}
+-->
+</style>
   <body>
+  <center>
     <form action="/photos" enctype="multipart/form-data" method="post">
-       <input type="file" name="photo" />
-       <input type="submit" value="upload" />
+       <p class="style1">Upload Geotagged Image  </p>
+       <p>
+         <input type="file" name="photo" />
+         <input type="submit" value="upload" />
+       </p>
     </form>
+    <form>
+<p class="style2">Park Name:</p> <input type="text" name="parkname" /><br />
+<p class="style2">Your Name:</p> <input type="text" name="yourname" />
+</form> 
+  </center>
   </body>
 </html>
